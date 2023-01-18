@@ -28,4 +28,10 @@ AAO78252.1	CDA87108.1	59.322	236	96	0	6	241	4	239	1.89e-96	293	1262750
 AAO78252.1	WP_227188819.1	58.475	236	98	0	6	241	2	237	6.20e-96	291	818
 AAO78252.1	MBV4310778.1	58.475	236	98	0	6	241	4	239	6.63e-96	291	818
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ 
+##
+[cheemaj@NBI-HPC interactive gen-core-fasta]$ pwd
+/jic/scratch/groups/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/gen-core-fasta
+[cheemaj@NBI-HPC interactive gen-core-fasta]$ jit extract-core-sequences.py
+
+
 ```
