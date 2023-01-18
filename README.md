@@ -29,9 +29,12 @@ AAO78252.1	WP_227188819.1	58.475	236	98	0	6	241	2	237	6.20e-96	291	818
 AAO78252.1	MBV4310778.1	58.475	236	98	0	6	241	4	239	6.63e-96	291	818
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ 
 ##
-[cheemaj@NBI-HPC interactive gen-core-fasta]$ pwd
-/jic/scratch/groups/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/gen-core-fasta
-[cheemaj@NBI-HPC interactive gen-core-fasta]$ jit extract-core-sequences.py
+[(/Users/cheemaj/MM/myenv) N108628:gen-core-fasta cheemaj$ pwd
+/Volumes/Group-Scratch/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/gen-core-fasta
+(/Users/cheemaj/MM/myenv) N108628:gen-core-fasta cheemaj$ python extract-core-sequences.py  > run_log.txt
+(/Users/cheemaj/MM/myenv) N108628:gen-core-fasta cheemaj$ python -V
+Python 3.7.12
+(/Users/cheemaj/MM/myenv) N108628:gen-core-fasta cheemaj$ python extract-core-sequences.py  > run_log.txt
 
 
 ```
