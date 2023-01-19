@@ -1,7 +1,7 @@
 # btenA
-- Searching for optimal model of protein evolution iusing our core representatives
-- We ran the `ModelTest-NG v0.1.7`on the core proteins`data/prank-48_alignmt.fas` 
-- The output files are in the folder `model-test-core`
+- Searching for optimal model of protein evolution using our core representatives protein alignment
+- We ran the `ModelTest-NG` version v0.1.7, on the core proteins`data/prank-48_alignmt.fas` 
+- The output files are in the folder `model-test-core` under this repo
 
 ```bash
 Modeltest-ng was called as follows: 
