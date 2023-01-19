@@ -1,9 +1,29 @@
+# btenA
+- Searching for optimal model of protein evolution iusing our core representatives
+- We ran the `ModelTest-NG v0.1.7`on the core proteins`data/prank-48_alignmt.fas` 
+
+```bash
+Modeltest-ng was called as follows: 
+[cheemaj@NBI-HPC interactive model-test-core-48]$ pwd
+/jic/scratch/groups/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/model-test-core-48
+[cheemaj@NBI-HPC interactive model-test-core-48]$./modeltest-ng-static -i prank-48_alignmt.fas -d aa -p 16 
+# optimal model found: 
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC            WAG+I+G4    38901.9182        1.0000
+       AIC            WAG+I+G4    38461.7530        1.0000
+      AICc            WAG+I+G4    38488.7530        1.0000
+
+
+```
+
 # HGT check btenA 
 
 - We start with a bteA protein sequence `btenA.fasta` and preforming a blastp (Protein-Protein BLAST version 2.9.0+) search against a remote `nr` database on 18.01.2022
 - using a E cut-off 1e-5 we get 462 hits `data/similarity-btenA-VPI-5482.out`
 - The equivalent hits are: AAO78252.1, 	WP_011108665.1
-- Filter the hits using teh core species table, `data/core-48-fixed-table.txt`
+- Using the core proteins found in `data/prank-48_alignmt.fas` 
+- Filter the hits using the core species table, `data/core-48-fixed-table.txt`
 
 ```bash
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ pwd
