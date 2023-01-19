@@ -28,7 +28,7 @@ prank-48_alignmt.fas.tree
 - We built Maximum-likelihood(ML) tree `MLprank-48_alignment.phy.treefile` using `IQ-TREE multicore version 2.2.0`
 - 1000 Bootstraps were generated and drawn on the optimal consensus tree `btenA/mltree-boostrapped/prank-48_alignment.phy.contree`
 - Consensus bootstrapped tree was visualised with iTOL webserver `https://itol.embl.de/`
-- The unrooted and the corresponding midpoint rooted tree is under `mid-point-rooted-itol/mid-rooted-ML-contree-core.nexus` and `mid-point-rooted-itol/mid-rooted-ML-contree-core-circular.pdf`
+- The unrooted `btenA/mltree-boostrapped/ITOL/unrooted-ML-contree-core-circular.pdf` and the corresponding midpoint rooted tree is under `mid-point-rooted-itol/mid-rooted-ML-contree-core.nexus` and `mid-point-rooted-itol/mid-rooted-ML-contree-core-circular.pdf`
 
 ```
 Command: /hpc-home/cheemaj/BUILD/IQTREE/iqtree-2.2.0-Linux/bin/iqtree2 -s prank-48_alignment.phy -m WAG+I+G4 -B 1000
