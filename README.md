@@ -1,6 +1,7 @@
 # btenA
 - Searching for optimal model of protein evolution iusing our core representatives
 - We ran the `ModelTest-NG v0.1.7`on the core proteins`data/prank-48_alignmt.fas` 
+- The output files are in the folder `model-test-core`
 
 ```bash
 Modeltest-ng was called as follows: 
@@ -14,6 +15,12 @@ Modeltest-ng was called as follows:
        AIC            WAG+I+G4    38461.7530        1.0000
       AICc            WAG+I+G4    38488.7530        1.0000
 
+[cheemaj@NBI-HPC interactive model-test-core]$ ls -1
+prank-48_alignmt.fas
+prank-48_alignmt.fas.ckp
+prank-48_alignmt.fas.log
+prank-48_alignmt.fas.tree
+[cheemaj@NBI-HPC interactive model-test-core]$
 
 ```
 
