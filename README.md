@@ -178,8 +178,8 @@ AAO78252.1	WP_224431244.1:9:44.393:5.28e-54:184	WP_011108665.1:1:100.000:0.0:514
 (/Users/cheemaj/MM/myenv) N108628:AHS-finder cheemaj$ 
 (/Users/cheemaj/MM/myenv) N108628:AHS-finder cheemaj$ pwd
 ../cheemaj/scratch/scratch-work/jitender/regis/RUN_AVP/AHS-finder
-(/Users/cheemaj/MM/myenv) N108628:AHS-finder cheemaj$ open .
-
+(/Users/cheemaj/MM/myenv) N108628:AHS-finder cheemaj$ 
+# AHS-finder directory is under `bten/AHS-finder` in this repo
 
 
 ```
