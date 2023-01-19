@@ -90,6 +90,8 @@ Ultrafast bootstrap approximation results written to:
 - The equivalent hits are: AAO78252.1, 	WP_011108665.1
 - Using the core proteins found in `data/prank-48_alignmt.fas` 
 - Filter the hits using the core species table, `data/core-48-fixed-table.txt`
+- The core hits were run using the script from AvP pipeline (https://github.com/GDKO/AvP) 
+- AvP first pass has found WP_066308905.1 and WP_224431244.1 as potential HGT donor to the btenA-VPI-5482, WP_011108665.1 ( or  AAO78252.1) fowllowing the 
 
 ```bash
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ pwd
@@ -180,6 +182,9 @@ AAO78252.1	WP_224431244.1:9:44.393:5.28e-54:184	WP_011108665.1:1:100.000:0.0:514
 ../cheemaj/scratch/scratch-work/jitender/regis/RUN_AVP/AHS-finder
 (/Users/cheemaj/MM/myenv) N108628:AHS-finder cheemaj$ 
 # AHS-finder directory is under `bten/AHS-finder` in this repo
+
+AvP suggests for poteintial HGT candidates having either AI above 10 or AHS above 0, and outg_pct above 80.
+
 
 
 ```
