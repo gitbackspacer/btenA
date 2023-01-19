@@ -13,7 +13,7 @@ Modeltest-ng was called as follows:
   +G4: discrete Gamma model (Yang, 1994) with default 4 rate categories.
 
 [cheemaj@NBI-HPC interactive model-test-core-48]$ pwd
-/jic/scratch/groups/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/model-test-core-48
+../cheemaj/scratch/scratch-work/jitender/regis/model-test-core-48
 [cheemaj@NBI-HPC interactive model-test-core-48]$./modeltest-ng-static -i prank-48_alignmt.fas -d aa -p 16 
 # optimal model found: 
                          Model         Score        Weight
@@ -93,7 +93,7 @@ Ultrafast bootstrap approximation results written to:
 
 ```bash
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ pwd
-/Volumes/Group-Scratch/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/AVP/AvP-master/aux_scripts
+../cheemaj/scratch/scratch-work/jitender/regis/AVP/AvP-master/aux_scripts
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ 
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ which blastp
 /Users/cheemaj/MM/myenv/bin/blastp
@@ -116,7 +116,7 @@ AAO78252.1	MBV4310778.1	58.475	236	98	0	6	241	4	239	6.63e-96	291	818
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ 
 ##
 [(/Users/cheemaj/MM/myenv) N108628:gen-core-fasta cheemaj$ pwd
-/Volumes/Group-Scratch/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/gen-core-fasta
+../cheemaj/scratch/scratch-work/jitender/regis/gen-core-fasta
 (/Users/cheemaj/MM/myenv) N108628:gen-core-fasta cheemaj$ python extract-core-sequences.py  > run_log.txt
 (/Users/cheemaj/MM/myenv) N108628:gen-core-fasta cheemaj$ python -V
 Python 3.7.12
