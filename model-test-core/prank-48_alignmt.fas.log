@@ -1,0 +1,204 @@
+Physical cores: 16
+Logical cores:  32
+Memory:         62.7GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Validating binary checkpoint
+OK!
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        prank-48_alignmt.fas
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            48
+  #sites:           760
+  #patterns:        661
+  Max. thread mem:  75 MB
+
+Output:
+  Log:           prank-48_alignmt.fas.log
+  Starting tree: prank-48_alignmt.fas.tree
+  Results:       prank-48_alignmt.fas.out
+
+Selection options:
+  # protein matrices: 19
+  # protein models:   152
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: false
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          16/16
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> ./modeltest-ng-static -i prank-48_alignmt.fas -d aa -p 16 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:21
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  WAG+I+G4           2    -19135.8765     38901.9182         0.0000    1.0000
+       2  LG+I+G4            2    -19151.1893     38932.5438        30.6256    0.0000
+       3  VT+I+G4            2    -19155.1318     38940.4289        38.5107    0.0000
+       4  WAG+G4             1    -19159.4869     38942.5058        40.5876    0.0000
+       5  LG+G4              1    -19169.5670     38962.6660        60.7477    0.0000
+       6  VT+G4              1    -19178.7443     38981.0205        79.1023    0.0000
+       7  WAG+I+G4+F        21    -19144.7992     39045.7967       143.8784    0.0000
+       8  LG+I+G4+F         21    -19150.6146     39057.4276       155.5094    0.0000
+       9  VT+I+G4+F         21    -19156.4007     39068.9996       167.0814    0.0000
+      10  WAG+G4+F          20    -19171.9734     39093.5118       191.5936    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              WAG+I+G4
+lnL:                -19135.8765
+Frequencies:        0.0866 0.0440 0.0391 0.0570 0.0193 0.0367 0.0581 0.0833 0.0244 0.0485 0.0862 0.0620 0.0195 0.0384 0.0458 0.0695 0.0610 0.0144 0.0353 0.0709
+Inv. sites prop:    0.0240
+Gamma shape:        2.6844
+Score:              38901.9182
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0262
+Alpha:              2.1922
+Alpha-P.Inv:        2.6844
+P.Inv-Alpha:        0.0240
+Frequencies:        0.0890 0.0357 0.0550 0.0592 0.0184 0.0486 0.0614 0.0478 0.0185 0.0500 0.0843 0.0627 0.0313 0.0491 0.0457 0.0661 0.0466 0.0230 0.0620 0.0455 
+
+Commands:
+  > phyml  -i prank-48_alignmt.fas -d aa -m WAG -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s prank-48_alignmt.fas -m PROTGAMMAIWAG -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa prank-48_alignmt.fas --model WAG+I+G4
+  > paup -s prank-48_alignmt.fas
+  > iqtree -s prank-48_alignmt.fas -m WAG+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  WAG+I+G4           2    -19135.8765     38461.7530         0.0000    1.0000
+       2  LG+I+G4            2    -19151.1893     38492.3785        30.6256    0.0000
+       3  VT+I+G4            2    -19155.1318     38500.2637        38.5107    0.0000
+       4  WAG+G4             1    -19159.4869     38506.9738        45.2209    0.0000
+       5  WAG+I+G4+F        21    -19144.7992     38517.5984        55.8454    0.0000
+       6  LG+G4              1    -19169.5670     38527.1340        65.3811    0.0000
+       7  LG+I+G4+F         21    -19150.6146     38529.2293        67.4763    0.0000
+       8  VT+I+G4+F         21    -19156.4007     38540.8013        79.0483    0.0000
+       9  VT+G4              1    -19178.7443     38545.4886        83.7356    0.0000
+      10  WAG+G4+F          20    -19171.9734     38569.9468       108.1938    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              WAG+I+G4
+lnL:                -19135.8765
+Frequencies:        0.0866 0.0440 0.0391 0.0570 0.0193 0.0367 0.0581 0.0833 0.0244 0.0485 0.0862 0.0620 0.0195 0.0384 0.0458 0.0695 0.0610 0.0144 0.0353 0.0709
+Inv. sites prop:    0.0240
+Gamma shape:        2.6844
+Score:              38461.7530
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0262
+Alpha:              2.1922
+Alpha-P.Inv:        2.6844
+P.Inv-Alpha:        0.0240
+Frequencies:        0.0890 0.0357 0.0550 0.0592 0.0184 0.0486 0.0614 0.0478 0.0185 0.0500 0.0843 0.0627 0.0313 0.0491 0.0457 0.0661 0.0466 0.0230 0.0620 0.0455 
+
+Commands:
+  > phyml  -i prank-48_alignmt.fas -d aa -m WAG -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s prank-48_alignmt.fas -m PROTGAMMAIWAG -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa prank-48_alignmt.fas --model WAG+I+G4
+  > paup -s prank-48_alignmt.fas
+  > iqtree -s prank-48_alignmt.fas -m WAG+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  WAG+I+G4           2    -19135.8765     38488.7530         0.0000    1.0000
+       2  LG+I+G4            2    -19151.1893     38519.3785        30.6256    0.0000
+       3  VT+I+G4            2    -19155.1318     38527.2637        38.5107    0.0000
+       4  WAG+G4             1    -19159.4869     38532.9738        44.2209    0.0000
+       5  LG+G4              1    -19169.5670     38553.1340        64.3811    0.0000
+       6  WAG+I+G4+F        21    -19144.7992     38557.5984        68.8454    0.0000
+       7  LG+I+G4+F         21    -19150.6146     38569.2293        80.4763    0.0000
+       8  VT+G4              1    -19178.7443     38571.4886        82.7356    0.0000
+       9  VT+I+G4+F         21    -19156.4007     38580.8013        92.0483    0.0000
+      10  WAG+G4+F          20    -19171.9734     38608.9468       120.1938    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              WAG+I+G4
+lnL:                -19135.8765
+Frequencies:        0.0866 0.0440 0.0391 0.0570 0.0193 0.0367 0.0581 0.0833 0.0244 0.0485 0.0862 0.0620 0.0195 0.0384 0.0458 0.0695 0.0610 0.0144 0.0353 0.0709
+Inv. sites prop:    0.0240
+Gamma shape:        2.6844
+Score:              38488.7530
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0262
+Alpha:              2.1922
+Alpha-P.Inv:        2.6844
+P.Inv-Alpha:        0.0240
+Frequencies:        0.0890 0.0357 0.0550 0.0592 0.0184 0.0486 0.0614 0.0478 0.0185 0.0500 0.0843 0.0627 0.0313 0.0491 0.0457 0.0661 0.0466 0.0230 0.0620 0.0455 
+
+Commands:
+  > phyml  -i prank-48_alignmt.fas -d aa -m WAG -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s prank-48_alignmt.fas -m PROTGAMMAIWAG -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa prank-48_alignmt.fas --model WAG+I+G4
+  > paup -s prank-48_alignmt.fas
+  > iqtree -s prank-48_alignmt.fas -m WAG+I+G4
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC            WAG+I+G4    38901.9182        1.0000
+       AIC            WAG+I+G4    38461.7530        1.0000
+      AICc            WAG+I+G4    38488.7530        1.0000
+
+Execution results written to prank-48_alignmt.fas.out
+Starting tree written to prank-48_alignmt.fas.tree
