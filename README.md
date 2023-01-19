@@ -26,7 +26,7 @@ prank-48_alignmt.fas.tree
 # Building Maximum-likelihood(ML) tree with the Optimal model
 
 - We built Maximum-likelihood(ML) tree `MLprank-48_alignment.phy.treefile` using `IQ-TREE multicore version 2.2.0`
-- 1000 Bootstrap were generated and drawn on the optimal tree
+- 1000 Bootstraps were generated and drawn on the optimal tree
 
 ```
 Command: /hpc-home/cheemaj/BUILD/IQTREE/iqtree-2.2.0-Linux/bin/iqtree2 -s prank-48_alignment.phy -m WAG+I+G4 -B 1000
@@ -40,6 +40,44 @@ Ultrafast bootstrap approximation results written to:
   Split support values:          prank-48_alignment.phy.splits.nex
   Consensus tree:                prank-48_alignment.phy.contree
   Screen log file:               prank-48_alignment.phy.log
+
+# iTOL tree visaulisation
+[cheemaj@NBI-HPC interactive mltree-boostrapped]$ pwd
+../cheemaj/scratch/scratch-work/jitender/regis/mltree-boostrapped
+[cheemaj@NBI-HPC interactive mltree-boostrapped]$
+.
+├── ITOL
+│   ├── mid-point-rooted-itol
+│   │   ├── mid-rooted-ML-contree-core-circular.pdf
+│   │   ├── mid-rooted-ML-contree-core-circular.svg
+│   │   ├── mid-rooted-ML-contree-core-newick.txt
+│   │   ├── mid-rooted-ML-contree-core.nexus
+│   │   ├── mid-rooted-ML-contree-core-rect.pdf
+│   │   ├── mid-rooted-ML-contree-core-rect.svg
+│   │   └── readme.txt
+│   ├── prank-48_alignment.phy.contree
+│   ├── readme.txt
+│   ├── unrooted-ML-contree-core-circular.pdf
+│   ├── unrooted-ML-contree-core-circular.svg
+│   ├── unrooted-ML-contree-core-rect.pdf
+│   └── unrooted-ML-contree-core-rect.svg
+├── prank-48_alignment.phy
+├── prank-48_alignment.phy.bionj
+├── prank-48_alignment.phy.ckp.gz
+├── prank-48_alignment.phy.contree
+├── prank-48_alignment.phy.iqtree
+├── prank-48_alignment.phy.log
+├── prank-48_alignment.phy.mldist
+├── prank-48_alignment.phy.splits.nex
+├── prank-48_alignment.phy.treefile
+└── readme.txt
+
+2 directories, 23 files
+[cheemaj@NBI-HPC interactive mltree-boostrapped]$ pwd
+/jic/scratch/groups/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/mltree-boostrapped
+[cheemaj@NBI-HPC interactive mltree-boostrapped]$
+  
+  
 ```
 
 
