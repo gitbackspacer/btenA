@@ -26,7 +26,9 @@ prank-48_alignmt.fas.tree
 # Building Maximum-likelihood(ML) tree with the Optimal model
 
 - We built Maximum-likelihood(ML) tree `MLprank-48_alignment.phy.treefile` using `IQ-TREE multicore version 2.2.0`
-- 1000 Bootstraps were generated and drawn on the optimal tree
+- 1000 Bootstraps were generated and drawn on the optimal consensus tree `btenA/mltree-boostrapped/prank-48_alignment.phy.contree`
+- Consensus bootstrapped tree was visualised with iTOL webserver `https://itol.embl.de/`
+- The unrooted and the corresponding midpoint rooted tree is under `mid-point-rooted-itol/mid-rooted-ML-contree-core.nexus` and `mid-point-rooted-itol/mid-rooted-ML-contree-core-circular.pdf`
 
 ```
 Command: /hpc-home/cheemaj/BUILD/IQTREE/iqtree-2.2.0-Linux/bin/iqtree2 -s prank-48_alignment.phy -m WAG+I+G4 -B 1000
@@ -41,7 +43,7 @@ Ultrafast bootstrap approximation results written to:
   Consensus tree:                prank-48_alignment.phy.contree
   Screen log file:               prank-48_alignment.phy.log
 
-# iTOL tree visaulisation
+# iTOL tree visualisation https://itol.embl.de/tree/1491552146571791674156084
 [cheemaj@NBI-HPC interactive mltree-boostrapped]$ pwd
 ../cheemaj/scratch/scratch-work/jitender/regis/mltree-boostrapped
 [cheemaj@NBI-HPC interactive mltree-boostrapped]$
@@ -71,15 +73,8 @@ Ultrafast bootstrap approximation results written to:
 ├── prank-48_alignment.phy.splits.nex
 ├── prank-48_alignment.phy.treefile
 └── readme.txt
-
-2 directories, 23 files
-[cheemaj@NBI-HPC interactive mltree-boostrapped]$ pwd
-/jic/scratch/groups/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/mltree-boostrapped
-[cheemaj@NBI-HPC interactive mltree-boostrapped]$
-  
   
 ```
-
 
 # HGT check btenA 
 
