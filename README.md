@@ -23,6 +23,25 @@ prank-48_alignmt.fas.tree
 [cheemaj@NBI-HPC interactive model-test-core]$
 
 ```
+# Building Maximum-likelihood(ML) tree with the Optimal model
+
+- We built Maximum-likelihood(ML) tree `MLprank-48_alignment.phy.treefile` using `IQ-TREE multicore version 2.2.0`
+- 1000 Bootstrap were generated and drawn on the optimal tree
+
+```
+Command: /hpc-home/cheemaj/BUILD/IQTREE/iqtree-2.2.0-Linux/bin/iqtree2 -s prank-48_alignment.phy -m WAG+I+G4 -B 1000
+
+Analysis results written to: 
+  IQ-TREE report:                prank-48_alignment.phy.iqtree
+  Maximum-likelihood tree:       prank-48_alignment.phy.treefile
+  Likelihood distances:          prank-48_alignment.phy.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          prank-48_alignment.phy.splits.nex
+  Consensus tree:                prank-48_alignment.phy.contree
+  Screen log file:               prank-48_alignment.phy.log
+```
+
 
 # HGT check btenA 
 
