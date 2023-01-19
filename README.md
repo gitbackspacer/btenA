@@ -2,9 +2,16 @@
 - Searching for optimal model of protein evolution using our core representatives protein alignment
 - We ran the `ModelTest-NG` version v0.1.7, on the core proteins`data/prank-48_alignmt.fas` 
 - The output files are in the folder `model-test-core` under this repo
+- We ran ModelTest-NG version 0.1.7 on the alignment `prank-48_alignmt.fas`, we find the consensus model of evolution using both the optimal model using three criteria namely, Akaike information criterion (AIC), corrected Akaike information criterion (AICc), and the Bayesian information criterion (BIC) to be “WAG+I+G4”.
+
 
 ```bash
 Modeltest-ng was called as follows: 
+
+	WAG:	General matrix (Whelan and Goldman, 2001).
+  +I : Rate heterogeneity across sites
+  +G4: discrete Gamma model (Yang, 1994) with default 4 rate categories.
+
 [cheemaj@NBI-HPC interactive model-test-core-48]$ pwd
 /jic/scratch/groups/Matthew-Hartley/cheemaj/scratch/scratch-work/jitender/regis/model-test-core-48
 [cheemaj@NBI-HPC interactive model-test-core-48]$./modeltest-ng-static -i prank-48_alignmt.fas -d aa -p 16 
