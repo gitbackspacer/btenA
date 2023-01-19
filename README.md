@@ -185,6 +185,7 @@ AAO78252.1	WP_224431244.1:9:44.393:5.28e-54:184	WP_011108665.1:1:100.000:0.0:514
 
 AvP suggests for poteintial HGT candidates having either AI above 10 or AHS above 0, and outg_pct above 80.
 
-
+Given the high AHS score and outg_pct suggests potential candidates for HGT:
+  Aquimarina aggregata(Bacteroidetes; WP_066308905.1) and Aeromonas rivuli(γ-Proteobacteria; WP_224431244.1)  to the reciepient (AAO78252.1; btenA-VPI-5482 Intestinal  bacterias) 	
 
 ```
