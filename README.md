@@ -1,8 +1,8 @@
 # btenA
-- Searching for optimal model of protein evolution using our core representatives protein alignment
+- Searching for an optimal model of protein evolution using our core representatives protein alignment
 - We ran the `ModelTest-NG` version v0.1.7, on the core proteins`data/prank-48_alignmt.fas` 
 - The output files are in the folder `model-test-core` under this repo
-- We ran ModelTest-NG version 0.1.7 on the alignment `prank-48_alignmt.fas`, we find the consensus model of evolution using both the optimal model using three criteria namely, Akaike information criterion (AIC), corrected Akaike information criterion (AICc), and the Bayesian information criterion (BIC) to be “WAG+I+G4”.
+- We ran the ModelTest-NG version `0.1.7` on the alignment `prank-48_alignmt.fas`, we found the consensus model of evolution using both the optimal model using three criteria namely, Akaike information criterion (AIC), corrected Akaike information criterion (AICc), and the Bayesian information criterion (BIC) to be “WAG+I+G4”.
 
 
 ```bash
@@ -34,7 +34,7 @@ prank-48_alignmt.fas.tree
 
 - We built Maximum-likelihood(ML) tree `MLprank-48_alignment.phy.treefile` using `IQ-TREE multicore version 2.2.0`
 - 1000 Bootstraps were generated and drawn on the optimal consensus tree `btenA/mltree-boostrapped/prank-48_alignment.phy.contree`
-- Consensus bootstrapped tree was visualised with iTOL webserver `https://itol.embl.de/`
+- Consensus bootstrapped tree was visualised with the iTOL webserver `https://itol.embl.de/`
 - The unrooted `btenA/mltree-boostrapped/ITOL/unrooted-ML-contree-core-circular.pdf` and the corresponding midpoint rooted tree is under `mid-point-rooted-itol/mid-rooted-ML-contree-core.nexus` and `mid-point-rooted-itol/mid-rooted-ML-contree-core-circular.pdf`
 
 ```
@@ -85,13 +85,13 @@ Ultrafast bootstrap approximation results written to:
 
 # HGT check btenA 
 
-- We start with a bteA protein sequence `btenA.fasta` and preforming a blastp (Protein-Protein BLAST version 2.9.0+) search against a remote `nr` database on 18.01.2022
-- using a E cut-off 1e-5 we get 462 hits `data/similarity-btenA-VPI-5482.out`
-- The equivalent hits are: AAO78252.1, 	WP_011108665.1
+- We start with a BtenA protein sequence `btenA.fasta` and performing a blastp (Protein-Protein BLAST version 2.9.0+) search against a remote `nr` database on 18.01.2022
+- Using a E-value cut-off (1e-5), we get 462 hits `data/similarity-btenA-VPI-5482.out`
+- BtenA protein with rhe equivalent hits have accessions ids: AAO78252.1, WP_011108665.1
 - Using the core proteins found in `data/prank-48_alignmt.fas` 
 - Filter the hits using the core species table, `data/core-48-fixed-table.txt`
-- The core hits were run using the script from AvP pipeline (https://github.com/GDKO/AvP) 
-- AvP first pass has found WP_066308905.1 and WP_224431244.1 as potential HGT donor to the btenA-VPI-5482, WP_011108665.1 ( or  AAO78252.1) fowllowing the 
+- The core hits were then run using the script from AvP pipeline (https://github.com/GDKO/AvP), specifically (https://github.com/GDKO/AvP/blob/master/aux_scripts/calculate_ai.py)
+- AvP first pass has found WP_066308905.1 and WP_224431244.1 as potential HGT donor to the btenA-VPI-5482, WP_011108665.1 ( or  AAO78252.1)  based on the metric defined in the AvP article(https://doi.org/10.1371/journal.pcbi.1010686)
 
 ```bash
 (/Users/cheemaj/MM/myenv) N108628:aux_scripts cheemaj$ pwd
@@ -129,7 +129,7 @@ Python 3.7.12
 
 # Construct the list of Ingroup and EG group yaml files:
 
-# First the interstinal bacteroids config file
+# First the intestinal bacteroids config file
 (/Users/cheemaj/MM/myenv) N108628:AHS-finder cheemaj$ cat  intestinal-groups.yaml 
 ---
 Ingroup:
@@ -183,9 +183,12 @@ AAO78252.1	WP_224431244.1:9:44.393:5.28e-54:184	WP_011108665.1:1:100.000:0.0:514
 (/Users/cheemaj/MM/myenv) N108628:AHS-finder cheemaj$ 
 # AHS-finder directory is under `bten/AHS-finder` in this repo
 
-AvP suggests for poteintial HGT candidates having either AI above 10 or AHS above 0, and outg_pct above 80.
-
-Given the high AHS score and outg_pct suggests potential candidates for HGT:
-  Aquimarina aggregata(Bacteroidetes; WP_066308905.1) and Aeromonas rivuli(γ-Proteobacteria; WP_224431244.1)  to the reciepient (AAO78252.1; btenA-VPI-5482 Intestinal  bacterias) 	
-
 ```
+
+
+# AvP AHS metric
+
+- AvP suggests for potential HGT candidates having either AI above 10 or AHS above 0, and outg_pct above 80.
+- Given the high AHS score and outg_pct suggests potential candidates for HGT: Aquimarina aggregata(Bacteroidetes; WP_066308905.1) and Aeromonas rivuli(γ-Proteobacteria; WP_224431244.1)  to the reciepient (AAO78252.1; btenA-VPI-5482 Intestinal  bacterias) 
+- We should be cautious that the these metric should be interpreted in conjuction with other gene/protein homolgy evidence	
+
